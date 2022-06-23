@@ -10,5 +10,8 @@ const currentCalculationOutput = document.getElementById('current-calculation');
 
 function outputResult(result, text) {
   currentResultOutput.textContent = result;
+  // This produces the same end result as the line above
+  // document.getElementById('current-result').textContent = result;
+
   currentCalculationOutput.textContent = text;
 }

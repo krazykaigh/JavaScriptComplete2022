@@ -1,7 +1,12 @@
 /*jshint esversion: 8 */
+const defaultResult = 0;
+let currentResult = defaultResult;
 
-let currentResult = 0;
+function addNumbers () {
+    currentResult = currentResult + userInput.value;
+    outputResult(currentResult, '');
+}
 
-currentResult += 10;
+addBtn.addEventListener('click', addNumbers);
 
-outputResult(currentResult, '');
+
