@@ -62,7 +62,7 @@ const getWinner = (cChoice, pChoice) =>
 // };
 
 
-startGameBtn.addEventListener('click', function startGame() {
+startGameBtn.addEventListener('click', () => {
   if (gameIsRunning) {
     return;
   }
