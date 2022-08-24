@@ -14,8 +14,8 @@ let COMPUTER_SELECTION = null;
 
 let gameIsRunning = false;
 
-const getPlayerChoice = function() {
-  const selection = prompt (`${ROCK}, ${PAPER}, or ${SCISSORS}?`, '').toUpperCase();
+const getPlayerChoice = () => {
+  const selection = prompt(`${ROCK}, ${PAPER}, or ${SCISSORS}?`, '').toUpperCase();
   if (
     selection !== ROCK &&
     selection !== PAPER &&
@@ -28,7 +28,7 @@ const getPlayerChoice = function() {
 };
 
 
-const getComputerChoice = function() {
+const getComputerChoice = () => {
   randomChoice = Math.random();
   if (randomChoice < 0.34) {
     return ROCK;
@@ -39,19 +39,27 @@ const getComputerChoice = function() {
   }
 };
 
-const getWinner = function(cChoice, pChoice) {
-  if (cChoice === pChoice) {
-    return RESULT_DRAW;
-  } else if(cChoice === ROCK && pChoice === SCISSORS) {
-    return RESULT_COMPUTER_WINS;
-  } else if (cChoice === PAPER && pChoice === ROCK) {;
-    return RESULT_COMPUTER_WINS;
-  } else if (cChoice === SCISSORS && pChoice === PAPER) {;
-    return RESULT_COMPUTER_WINS;
-  } else {
-    return 'Player Wins!';
-  }
-};
+const getWinner = (cChoice, pChoice) =>
+  cChoice === pChoice ? RESULT_DRAW :
+  (cChoice === ROCK && pChoice === PAPER) ||
+  (cChoice === PAPER && pChoice === SCISSORS) ||
+  (cChoice === SCISSORS && pChoice === ROCK) ?
+  RESULT_PLAYER_WINS :
+  RESULT_COMPUTER_WINS;
+
+// const getWinner = (cChoice, pChoice) => {
+//   if (cChoice === pChoice) {
+//     return RESULT_DRAW;
+//   } else if(cChoice === ROCK && pChoice === SCISSORS) {
+//     return RESULT_COMPUTER_WINS;
+//   } else if (cChoice === PAPER && pChoice === ROCK) {;
+//     return RESULT_COMPUTER_WINS;
+//   } else if (cChoice === SCISSORS && pChoice === PAPER) {;
+//     return RESULT_COMPUTER_WINS;
+//   } else {
+//     return 'Player Wins!';
+//   }
+// };
 
 
 startGameBtn.addEventListener('click', function startGame() {
@@ -66,4 +74,4 @@ startGameBtn.addEventListener('click', function startGame() {
   console.log(`Computer chose ${COMPUTER_SELECTION}`);
   console.log(getWinner(COMPUTER_SELECTION, PLAYER_SELECTION));
   gameIsRunning = false;
-}); 
+});
