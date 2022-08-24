@@ -51,9 +51,7 @@ const getWinner = function(cChoice, pChoice) {
   } else {
     return 'Player Wins!';
   }
-  gameIsRunning = false;
 };
-
 
 
 startGameBtn.addEventListener('click', function startGame() {
@@ -67,4 +65,5 @@ startGameBtn.addEventListener('click', function startGame() {
   COMPUTER_SELECTION = getComputerChoice();
   console.log(`Computer chose ${COMPUTER_SELECTION}`);
   console.log(getWinner(COMPUTER_SELECTION, PLAYER_SELECTION));
+  gameIsRunning = false;
 }); 
