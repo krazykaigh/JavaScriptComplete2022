@@ -75,3 +75,21 @@ startGameBtn.addEventListener('click', () => {
   console.log(getWinner(COMPUTER_SELECTION, PLAYER_SELECTION));
   gameIsRunning = false;
 });
+
+
+// not related to game
+
+const sumUp = (CBFunction, ...numbers) => { //spread operator in parameter list.
+  let sum = 0;
+  for (const num of numbers) {
+    sum += num;
+  }
+  CBFunction(sum);
+};
+
+const showResult = (result) => {
+  alert('The result after adding all numbers is ' + result);
+}
+
+console.log(sumUp(showResult, 1, 12, 154, 3, -2));
+console.log(sumUp(showResult, 1, 12, 154, 3, -23, 233, 122, 32));
