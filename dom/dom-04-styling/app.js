@@ -8,6 +8,7 @@ const u1_complete = document.querySelector('u1');
 const section = document.querySelector('section');
 const button1 = document.getElementById('btn1');
 const button2 = document.getElementById('btn2');
+const div = document.querySelector('div');
 
 
 // section.style.backgroundColor = 'blue';
@@ -25,6 +26,10 @@ button1.addEventListener('click', () => {
 });
 
 button2.addEventListener('click', () => {
-  section.classList.toggle('red-bg');
-  section.classList.toggle('green-bg');
+  // section.classList.toggle('red-bg');
+  // section.classList.toggle('green-bg');
+  section.classList.toggle('grey-bg');
+  section.classList.toggle('blueviolet-bg');
 });
+
+
