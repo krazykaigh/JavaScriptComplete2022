@@ -1,4 +1,5 @@
 const ul = document.body.firstElementChild.nextElementSibling;
-const firstLi = ul.firstElementChild;
+const section = ul.firstElementChild;
 
-console.log(firstLi);
+console.log(section);
+
