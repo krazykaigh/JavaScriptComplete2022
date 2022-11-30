@@ -112,11 +112,12 @@ prices.forEach((price, idx, prices) => {
 });
 console.log(JSON.stringify(taxAdjustedPrices)); */
 
-const prices = [10.99, 5.99, 3.99, 6.59];
+/* const prices = [10.99, 5.99, 3.99, 6.59];
 const tax = 0.19;
 
 const taxAdjPrices = prices.map((price, idx, prices) => {
     const priceObj = { index: idx, taxAdjPrice: price * (1 + tax) };
     return priceObj;
 });
-console.log(JSON.stringify(taxAdjPrices));
+console.log(JSON.stringify(taxAdjPrices)); */
+
