@@ -21,4 +21,6 @@ else if (idx3 === null || list[i] >= list[idx3]) {
 idx3 = i;
 }
 }
+
+console.log(idx1 +":"+ list[idx1]+"\n"+ idx2 +":"+ list[idx2]+"\n"+ idx3 +":"+  list[idx3]);
 console.log(idx3);
