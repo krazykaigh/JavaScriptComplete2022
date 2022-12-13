@@ -26,7 +26,7 @@ function renderMovies() {
   movieList.append(movieEl);
   console.log('Text = ' + text);
   });
-};
+}
 
 function addMovieHandler() {
   const title = document.getElementById('title').value;
